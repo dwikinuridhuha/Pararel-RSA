@@ -1,0 +1,17 @@
+yang di pararelkan adalah generate key, dan saat proses encrip dan decripsi per karakter
+
+
+untuk pencarian private key
+for (i = id*(QN/size); i<((id+1)*(QN/size))-1;i++) {
+	if math.gcd(i,QN) == 1:
+		e_avail.append(i)
+}
+
+untuk encripsi
+for (i = id*(panajngHuruf/size); i<((id+1)*(panajngHuruf/size))-1;i++) {
+	M = ord(data[x]) #mengubah ke ASCII
+	ciper = M**e%N #proses enripsi perkarakter
+	ciperChr = chr(ciper) #hasil encrip dirubah ke karakter lagi
+	ciperASCII.append(ciper) #kode ASCII di masukan ke list a
+	ciperList.append(ciperChr) #hasil encrip yang berupa karakter di gabungkan lagi di list b
+}
